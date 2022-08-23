@@ -51,7 +51,7 @@ document.getElementById('btn-calculate').addEventListener('click', function () {
         return;
     }
     else if (isNaN(perPlayerCost)) {
-        alert('Enter a valid Amount');
+        alert('Enter the sallary of per player');
         perPlayerCostString.value = '';
         return;
     } else if (perPlayerCost < 0) {
@@ -97,11 +97,12 @@ document.getElementById('btn-total-calculate').addEventListener('click', functio
         return;
     }else if(isNaN(coachCost)){
         alert('Set the sallary of Coach');
-        managerCost.value = '';
+        coachCost.value = '';
         return;
     }else if(coachCost < 0){
-        lert('Enter a positive number');
-        managerCost.value = '';
+        alert('Enter a positive number');
+        coachCost.value = '';
+        return;
     }
 
     // Final cost calculation 

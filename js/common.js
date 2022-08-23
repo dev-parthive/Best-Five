@@ -11,10 +11,10 @@ function getInputFieldValueById(inputId) {
 
 
 function disableButton (button){
-
-
+    const selectedPlayer = document.getElementById('selected-player');
         button.setAttribute('disabled', true)
     button.style.backgroundColor = '#A2A9AF'; 
+    
 
     // console.log(button)
 }
