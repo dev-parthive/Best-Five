@@ -14,6 +14,15 @@ function displayPlayerName(playerName) {
         li.innerText = name;
         selectedPlayer.appendChild(li)
 
+        function disableButton (button){
+            const selectedPlayer = document.getElementById('selected-player');
+                button.setAttribute('disabled', true)
+            button.style.backgroundColor = '#A2A9AF'; 
+            
+        
+            // console.log(button)
+        }
+
 
     }
     if (playerName.length > 5) {
