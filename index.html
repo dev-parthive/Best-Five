@@ -43,7 +43,7 @@
                 <p>36 Goals</p> <span class="mx-4">.</span>
                 <p>120 Assist</p>
             </div>
-            <button class="w-75  select-button" onclick="selectedPlayerName(this)">SELECT</button>
+            <button id="btn-select" class="w-75  select-button" onclick="  disableButton(this) ,   selectedPlayerName(this)">SELECT</button>
             </div>
         </div>
         <div class="card me-4 mt-4 pb-3 text-center bg-black text-white">
@@ -55,7 +55,7 @@
                 <p>36 Goals</p> <span class="mx-4">.</span>
                 <p>120 Assist</p>
             </div>
-            <button class="w-75  select-button" onclick="selectedPlayerName(this)">SELECT</button>
+            <button id="btn-select" class="w-75  select-button" onclick="  disableButton(this) ,  selectedPlayerName(this)">SELECT</button>
             </div>
         </div>
         <div class="card me-4 mt-4 pb-3 text-center bg-black text-white">
@@ -66,7 +66,7 @@
                 <p>36 Goals</p> <span class="mx-4">.</span>
                 <p>120 Assist</p>
             </div>
-            <button class="w-75  select-button" onclick="selectedPlayerName(this)">SELECT</button>
+            <button id="btn-select" class="w-75  select-button" onclick="disableButton(this) , selectedPlayerName(this)">SELECT</button>
             </div>
         </div>
         <div class="card me-4 mt-4 pb-3 text-center bg-black text-white">
@@ -77,7 +77,7 @@
                 <p>36 Goals</p> <span class="mx-4">.</span>
                 <p>120 Assist</p>
             </div>
-            <button class="w-75  select-button" onclick="selectedPlayerName(this)">SELECT</button>
+            <button id="btn-select" class="w-75  select-button" onclick="  disableButton(this) ,  selectedPlayerName(this)">SELECT</button>
             </div>
         </div>
         <div class="card me-4 mt-4 pb-3 text-center bg-black text-white">
@@ -89,7 +89,7 @@
                 <p>36 Goals</p> <span class="mx-4">.</span>
                 <p>120 Assist</p>
             </div>
-            <button class="w-75  select-button" onclick="selectedPlayerName(this)">SELECT</button>
+            <button id="btn-select" class="w-75  select-button" onclick=" disableButton(this) ,   selectedPlayerName(this) ">SELECT</button>
             </div>
         </div>
         <div class="card player-card me-4 mt-4 pb-3 text-center bg-black text-white">
@@ -101,7 +101,7 @@
                 <p>36 Goals</p> <span class="mx-4">.</span>
                 <p>120 Assist</p>
             </div>
-            <button class="w-75  select-button" onclick="selectedPlayerName(this)">SELECT</button>
+            <button id="btn-select" class="w-75  select-button" onclick=" disableButton(this) ,  selectedPlayerName(this) ">SELECT</button>
             </div>
         </div>
         <div class="card player-card me-4 mt-4 pb-3 text-center bg-black text-white">
@@ -113,7 +113,7 @@
                 <p>36 Goals</p> <span class="mx-4">.</span>
                 <p>120 Assist</p>
             </div>
-            <button class="w-75  select-button" onclick="selectedPlayerName(this)">SELECT</button>
+            <button id="btn-select" class="w-75  select-button" onclick="  disableButton(this) , selectedPlayerName(this)">SELECT</button>
             </div>
         </div>
         <div class="card player-card me-4 mt-4 pb-3 text-center bg-black text-white">
@@ -125,7 +125,7 @@
                 <p>36 Goals</p> <span class="mx-4">.</span>
                 <p>120 Assist</p>
             </div>
-            <button class="w-75  select-button" onclick="selectedPlayerName(this)">SELECT</button>
+            <button id="btn-select" class="w-75  select-button" onclick=" disableButton(this) ,  selectedPlayerName(this)">SELECT</button>
             </div>
         </div>
         <div class="card player-card me-4 mt-4 pb-3 text-center bg-black text-white">
@@ -137,7 +137,7 @@
                 <p>36 Goals</p> <span class="mx-4">.</span>
                 <p>120 Assist</p>
             </div>
-            <button class="w-75  select-button" onclick="selectedPlayerName(this)">SELECT</button>
+            <button id="btn-select" class="w-75  select-button" onclick=" disableButton(this) ,  selectedPlayerName(this)">SELECT</button>
             </div>
         </div>
         </section>
@@ -164,23 +164,23 @@
                 <img src="./images/Ureg-Ureg Marker.png" alt="">
                 </div>
                 <div>
-                    <label for="per-player" class="per-player me-2">Per Player</label>
-                <input type="text" class="bg-dark border-1 border-white text-white w-50">
+                    <label for="per-player-price" class="per-player me-2">Per Player</label>
+                <input id="price-input-field" type="text" class="bg-dark border-1 border-white text-white w-50">
                 </div>
 
-                <button id="calculate" class="w-100 mt-3 p-2 text-white fw-bold">Calculate</button>
+                <button id="btn-calculate" class="w-100 mt-3 p-2 text-white fw-bold">Calculate</button>
                 <div class=" mt-3">
                     <p class="player-expenses">Player Expenses: <span class="ms-4">$</span><span id="total-expenses"></span></p>
                 </div>
                 <div class="mb-3">
                     <label for="per-player" class="per-player me-2">Manager</label>
-                <input type="text" class="bg-dark border-1 border-white text-white w-50">
+                <input id="manager-cost" type="text" class="bg-dark border-1 border-white text-white w-50">
                 </div>
                  <div class="mb-3">
                     <label for="per-player" class="per-player me-2">Coach</label>
-                <input type="text" class="bg-dark border-1 border-white text-white w-50">
+                <input type="text" id="coach-cost" class="bg-dark border-1 border-white text-white w-50">
                 </div>
-                <button id="calculate" class="w-100 mt-3 p-2 text-white fw-bold">Calculate Total</button>
+                <button id="btn-total-calculate" class="w-100 mt-3 p-2 text-white fw-bold">Calculate Total</button>
                 <div class="total  mt-3 d-flex justify-content-between">
                     <p class="">Total:</p>
                     <p>$ <span id="total-cost"></span></p>

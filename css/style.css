@@ -69,7 +69,7 @@ section#budget-section\ {
     font-size: 20px;
 }
 
-#calculate{
+#btn-calculate{
     background-color: #015196;
 }
 .player-expenses{
@@ -83,5 +83,12 @@ section#budget-section\ {
 .total p{
     color: #AFAFAF;
     font-size: 20px;
+}
+
+#total-expenses, #total-cost{
+    color: tomato;
+}
+#btn-total-calculate{
+    background-color: #015196;
 }
 /* main section start  */
