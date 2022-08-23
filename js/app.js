@@ -44,6 +44,23 @@ document.getElementById('btn-calculate').addEventListener('click', function () {
     const perPlayerCostString = document.getElementById('price-input-field').value;
     const perPlayerCost = parseFloat(perPlayerCostString)
 
+    //validation 
+    if (playerNameArray.length === 0) {
+        alert('You not chose any player. Please select 5 player ')
+        perPlayerCostString.value = '';
+        return;
+    }
+    else if (isNaN(perPlayerCost)) {
+        alert('Enter a valid Amount');
+        perPlayerCostString.value = '';
+        return;
+    } else if (perPlayerCost < 0) {
+        alert('Enter a positive number');
+        perPlayerCostString.value = '';
+        return;
+    }
+
+
     //calculation of totalPlayer Cost 
     const totalPlayerCost = perPlayerCost * numebrOfSelectedPlayers.childNodes.length;
     const totalPlayerExpenses = document.getElementById('total-expenses');
@@ -55,7 +72,7 @@ document.getElementById('btn-calculate').addEventListener('click', function () {
 })
 
 
-document.getElementById('btn-total-calculate').addEventListener('click', function(){
+document.getElementById('btn-total-calculate').addEventListener('click', function () {
     //manager cost 
     const managerCostString = document.getElementById('manager-cost').value;
     const managerCost = parseFloat(managerCostString);
@@ -68,14 +85,33 @@ document.getElementById('btn-total-calculate').addEventListener('click', functio
     const totalPlayerCostString = document.getElementById('total-expenses').innerText
     const totalPlayerCost = parseFloat(totalPlayerCostString)
 
+
+     //validation 
+   if (isNaN(managerCost)) {
+        alert('Set  the salary of Manager');
+        managerCost.value = '';
+        return;
+    } else if (managerCost < 0) {
+        alert('Enter a positive number');
+        managerCost.value = '';
+        return;
+    }else if(isNaN(coachCost)){
+        alert('Set the sallary of Coach');
+        managerCost.value = '';
+        return;
+    }else if(coachCost < 0){
+        lert('Enter a positive number');
+        managerCost.value = '';
+    }
+
     // Final cost calculation 
-    const finalCost =  managerCost + coachCost +    totalPlayerCost ;
+    const finalCost = managerCost + coachCost + totalPlayerCost;
 
     // Final cost upload in dom 
     const totalCost = document.getElementById('total-cost');
     totalCost.innerText = finalCost;
 
-    
+
 })
 
 

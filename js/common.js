@@ -1,4 +1,15 @@
 // common fucntion 
+
+
+//get inputfield value      
+function getInputFieldValueById(inputId) {
+    let inputField = document.getElementById(inputId);
+    let inputFieldValue = parseFloat(inputField.value);
+    return inputFieldValue;
+}
+
+
+
 function disableButton (button){
 
 
