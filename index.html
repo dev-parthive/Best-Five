@@ -43,7 +43,7 @@
                 <p>36 Goals</p> <span class="mx-4">.</span>
                 <p>120 Assist</p>
             </div>
-            <button class="w-75  select-button">SELECT</button>
+            <button class="w-75  select-button" onclick="selectedPlayerName(this)">SELECT</button>
             </div>
         </div>
         <div class="card me-4 mt-4 pb-3 text-center bg-black text-white">
@@ -55,7 +55,7 @@
                 <p>36 Goals</p> <span class="mx-4">.</span>
                 <p>120 Assist</p>
             </div>
-            <button class="w-75  select-button">SELECT</button>
+            <button class="w-75  select-button" onclick="selectedPlayerName(this)">SELECT</button>
             </div>
         </div>
         <div class="card me-4 mt-4 pb-3 text-center bg-black text-white">
@@ -66,7 +66,7 @@
                 <p>36 Goals</p> <span class="mx-4">.</span>
                 <p>120 Assist</p>
             </div>
-            <button class="w-75  select-button">SELECT</button>
+            <button class="w-75  select-button" onclick="selectedPlayerName(this)">SELECT</button>
             </div>
         </div>
         <div class="card me-4 mt-4 pb-3 text-center bg-black text-white">
@@ -77,20 +77,19 @@
                 <p>36 Goals</p> <span class="mx-4">.</span>
                 <p>120 Assist</p>
             </div>
-            <button class="w-75  select-button">SELECT</button>
+            <button class="w-75  select-button" onclick="selectedPlayerName(this)">SELECT</button>
             </div>
         </div>
         <div class="card me-4 mt-4 pb-3 text-center bg-black text-white">
             <img class="img-fluid" src="./images/player/Joel Embiid.jpg" alt="">
             <div class="player-description mt-4">
                 <h2 class="">
-                    Joel Embiid
-                    i</h2>
+                    Joel Embiid</h2>
             <div class="title d-flex justify-content-center">
                 <p>36 Goals</p> <span class="mx-4">.</span>
                 <p>120 Assist</p>
             </div>
-            <button class="w-75  select-button">SELECT</button>
+            <button class="w-75  select-button" onclick="selectedPlayerName(this)">SELECT</button>
             </div>
         </div>
         <div class="card player-card me-4 mt-4 pb-3 text-center bg-black text-white">
@@ -102,7 +101,7 @@
                 <p>36 Goals</p> <span class="mx-4">.</span>
                 <p>120 Assist</p>
             </div>
-            <button class="w-75  select-button">SELECT</button>
+            <button class="w-75  select-button" onclick="selectedPlayerName(this)">SELECT</button>
             </div>
         </div>
         <div class="card player-card me-4 mt-4 pb-3 text-center bg-black text-white">
@@ -114,7 +113,7 @@
                 <p>36 Goals</p> <span class="mx-4">.</span>
                 <p>120 Assist</p>
             </div>
-            <button class="w-75  select-button">SELECT</button>
+            <button class="w-75  select-button" onclick="selectedPlayerName(this)">SELECT</button>
             </div>
         </div>
         <div class="card player-card me-4 mt-4 pb-3 text-center bg-black text-white">
@@ -126,7 +125,7 @@
                 <p>36 Goals</p> <span class="mx-4">.</span>
                 <p>120 Assist</p>
             </div>
-            <button class="w-75  select-button">SELECT</button>
+            <button class="w-75  select-button" onclick="selectedPlayerName(this)">SELECT</button>
             </div>
         </div>
         <div class="card player-card me-4 mt-4 pb-3 text-center bg-black text-white">
@@ -138,7 +137,7 @@
                 <p>36 Goals</p> <span class="mx-4">.</span>
                 <p>120 Assist</p>
             </div>
-            <button class="w-75  select-button">SELECT</button>
+            <button class="w-75  select-button" onclick="selectedPlayerName(this)">SELECT</button>
             </div>
         </div>
         </section>
@@ -151,18 +150,40 @@
                 <img src="./images/Ureg-Ureg Marker.png" alt="">
                 </div>
                 <div class="player-list">
-                    <ul id="selected-player">
-                        <li class="text-white">parthive</li>
-                    </ul>
+                    <ol id="selected-player" class="text-white">
+                        
+                    </ol>
                 </div>
             </section>
             <!-- selection end  -->
 
             <!-- budget section start  -->
-            <section id="budget-section " class="bg-black p-4">
-                <div class="heading-and-img-wraper text-center">
+            <section id="budget-section " class="bg-black p-4 ">
+                <div class="heading-and-img-wraper text-center mb-4">
                     <h2 class="text-white">Budget</h2>
                 <img src="./images/Ureg-Ureg Marker.png" alt="">
+                </div>
+                <div>
+                    <label for="per-player" class="per-player me-2">Per Player</label>
+                <input type="text" class="bg-dark border-1 border-white text-white w-50">
+                </div>
+
+                <button id="calculate" class="w-100 mt-3 p-2 text-white fw-bold">Calculate</button>
+                <div class=" mt-3">
+                    <p class="player-expenses">Player Expenses: <span class="ms-4">$</span><span id="total-expenses"></span></p>
+                </div>
+                <div class="mb-3">
+                    <label for="per-player" class="per-player me-2">Manager</label>
+                <input type="text" class="bg-dark border-1 border-white text-white w-50">
+                </div>
+                 <div class="mb-3">
+                    <label for="per-player" class="per-player me-2">Coach</label>
+                <input type="text" class="bg-dark border-1 border-white text-white w-50">
+                </div>
+                <button id="calculate" class="w-100 mt-3 p-2 text-white fw-bold">Calculate Total</button>
+                <div class="total  mt-3 d-flex justify-content-between">
+                    <p class="">Total:</p>
+                    <p>$ <span id="total-cost"></span></p>
                 </div>
             </section>
             <!-- budget section end   -->
@@ -171,6 +192,15 @@
        </section>
     </main>
     <!-- ---- main section end -------  -->
+
+    <!-- Bootstrap  -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js"></script>
+
+    <!-- ..... common js .....  -->
+    <script src="./js/common.js"></script>
+
+    <!-- app js file -->
+    <script src="./js/app.js"></script>
+
 </body>
 </html>

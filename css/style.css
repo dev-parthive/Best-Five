@@ -64,4 +64,24 @@
 section#budget-section\ {
     border: 1px solid rgba(255, 255, 255, 0.349);
 }
+.per-player{
+    color: #AFAFAF;
+    font-size: 20px;
+}
+
+#calculate{
+    background-color: #015196;
+}
+.player-expenses{
+    color: #AFAFAF;
+    font-size: 20px;
+}
+
+#total-expenses{
+    color: #fff;
+}
+.total p{
+    color: #AFAFAF;
+    font-size: 20px;
+}
 /* main section start  */
